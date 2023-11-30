@@ -1,0 +1,19 @@
+---
+name: matrix
+
+on:
+  workflow_dispatch: ~
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  matrix:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        version: [1,2,3,4,5,6]
+    steps:
+      - run: echo 'step ${{ matrix.version }}'
