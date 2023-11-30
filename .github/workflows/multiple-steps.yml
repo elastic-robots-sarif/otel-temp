@@ -1,5 +1,5 @@
 ---
-name: multiple-jobs
+name: multiple-steps
 
 on:
   workflow_dispatch: ~
